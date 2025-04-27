@@ -1,29 +1,41 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Diagnóstico de Agua</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='estilos.css') }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Predicción de Calidad de Agua</title>
 </head>
 <body>
-    <h1>Diagnóstico de Calidad de Agua 💧</h1>
-    <form action="/resultado" method="POST">
-        <label>pH:</label><br>
-        <input type="number" name="ph" step="0.01" required><br><br>
+    <h1>Predicción de Calidad de Agua</h1>
+    <form method="POST">
+        <label for="ph">pH (0 a 14):</label>
+        <input type="number" step="any" id="ph" name="ph" required><br><br>
+        
+        <label for="hardness">Hardness (mg/L):</label>
+        <input type="number" step="any" id="hardness" name="hardness" required><br><br>
 
-        <label>Color (Unidades Pt-Co):</label><br>
-        <input type="number" name="color" required><br><br>
+        <label for="solids">Solids (ppm):</label>
+        <input type="number" step="any" id="solids" name="solids" required><br><br>
 
-        <label>Turbidez (NTU):</label><br>
-        <input type="number" name="turbidez" step="0.01" required><br><br>
+        <label for="chloramines">Chloramines (ppm):</label>
+        <input type="number" step="any" id="chloramines" name="chloramines" required><br><br>
 
-        <label>Conductividad (μS/cm):</label><br>
-        <input type="number" name="conductividad" step="0.01" required><br><br>
+        <label for="sulfate">Sulfate (mg/L):</label>
+        <input type="number" step="any" id="sulfate" name="sulfate" required><br><br>
 
-        <label>Oxígeno Disuelto (mg/L):</label><br>
-        <input type="number" name="oxigeno" step="0.01" required><br><br>
+        <label for="conductivity">Conductivity (μS/cm):</label>
+        <input type="number" step="any" id="conductivity" name="conductivity" required><br><br>
 
-        <button type="submit">Enviar</button>
+        <label for="organic_carbon">Organic Carbon (ppm):</label>
+        <input type="number" step="any" id="organic_carbon" name="organic_carbon" required><br><br>
+
+        <label for="trihalomethanes">Trihalomethanes (μg/L):</label>
+        <input type="number" step="any" id="trihalomethanes" name="trihalomethanes" required><br><br>
+
+        <label for="turbidity">Turbidity (NTU):</label>
+        <input type="number" step="any" id="turbidity" name="turbidity" required><br><br>
+
+        <button type="submit">Predecir</button>
     </form>
 </body>
 </html>

@@ -1,40 +1,44 @@
 from flask import Flask, render_template, request
 import joblib
-import numpy as np
+import pandas as pd
 
+# Inicializar la app Flask
 app = Flask(__name__)
 
-# Cargar el modelo de Machine Learning
-modelo = joblib.load('modelo_agua.pkl')  # Más adelante creamos este modelo
+# Cargar el modelo entrenado
+modelo = joblib.load("modelo_agua.pkl")
 
-@app.route("/")
-def home():
-    return render_template("index.html")
+@app.route("/", methods=["GET", "POST"])
+def index():
+    if request.method == 'POST':
+        # Recibir los datos del formulario
+        datos = {
+            'ph': float(request.form['ph']),
+            'Hardness': float(request.form['hardness']),
+            'Solids': float(request.form['solids']),
+            'Chloramines': float(request.form['chloramines']),
+            'Sulfate': float(request.form['sulfate']),
+            'Conductivity': float(request.form['conductivity']),
+            'Organic_carbon': float(request.form['organic_carbon']),
+            'Trihalomethanes': float(request.form['trihalomethanes']),
+            'Turbidity': float(request.form['turbidity'])
+        }
+        
+        # Crear un DataFrame con los datos
+        datos_df = pd.DataFrame([datos])
+        
+        # Asegúrate de que los nombres de las columnas coincidan exactamente con los del modelo
+        datos_df.columns = ['ph', 'Hardness', 'Solids', 'Chloramines', 'Sulfate', 'Conductivity', 'Organic_carbon', 'Trihalomethanes', 'Turbidity']
 
-@app.route("/resultado", methods=["POST"])
-def resultado():
-    # 1. Recibir datos del formulario
-    ph = float(request.form["ph"])
-    color = float(request.form["color"])
-    turbidez = float(request.form["turbidez"])
-    conductividad = float(request.form["conductividad"])
-    oxigeno = float(request.form["oxigeno"])
+        # Realizar la predicción
+        prediccion = modelo.predict(datos_df)
 
-    # 2. Preparar los datos en el formato que espera el modelo
-    datos_usuario = np.array([[ph, color, turbidez, conductividad, oxigeno]])
+        # Determinar el mensaje que se mostrará
+        if prediccion == 1:
+            resultado = "El agua es potable."
+        else:
+            resultado = "El agua no es potable."
 
-    # 3. Hacer predicción
-    prediccion = modelo.predict(datos_usuario)[0]  # Sacamos el primer valor (0 o 1, por ejemplo)
+        return render_template('resultado.html', prediccion=resultado)
 
-    # 4. Definir mensaje de salida
-    if prediccion == 0:
-        resultado = "El agua es limpia y segura. ✅"
-    elif prediccion == 1:
-        resultado = "El agua está contaminada. ⚠️"
-    else:
-        resultado = "El agua no es apta y no puede ser recuperada. ❌"
-
-    return render_template("resultado.html", resultado=resultado)
-
-if __name__ == "__main__":
-    app.run(debug=True)
+    return render_template('index.html')

@@ -1,0 +1,141 @@
+/* General Styles */
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #f7f9fc;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar Styles */
+.navbar {
+    background-color: #007bff;
+}
+
+.navbar a {
+    color: white !important;
+    font-size: 16px;
+}
+
+.navbar-brand h1 {
+    color: #fff;
+    font-weight: 600;
+}
+
+.navbar-toggler-icon {
+    background-color: white;
+}
+
+/* Carousel Styles */
+#header-carousel .carousel-item img {
+    object-fit: cover;
+    height: 100vh;
+}
+
+.carousel-caption {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 2rem;
+    border-radius: 8px;
+}
+
+.carousel-caption h1 {
+    font-size: 3rem;
+}
+
+.carousel-caption a {
+    background-color: #007bff;
+    padding: 1rem 2rem;
+    color: white;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 50px;
+}
+
+.carousel-caption a:hover {
+    background-color: #0056b3;
+}
+
+/* Formulario */
+#formulario {
+    background-color: white;
+    padding: 4rem 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#formulario h2 {
+    color: #007bff;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    font-weight: 600;
+    color: #333;
+}
+
+.form-control {
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 1.5rem;
+    transition: all 0.3s;
+}
+
+.form-control:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+button[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    padding: 1rem;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100%;
+    transition: all 0.3s;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* Footer */
+footer {
+    background-color: #007bff;
+    color: white;
+    text-align: center;
+    padding: 1.5rem 0;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Topbar */
+.container-fluid.bg-primary {
+    background-color: #0056b3;
+}
+
+.container-fluid.bg-primary .text-white {
+    color: white;
+}
+
+.container-fluid.bg-primary .d-inline-flex a {
+    margin-right: 1rem;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .carousel-caption h1 {
+        font-size: 2.5rem;
+    }
+
+    .carousel-caption a {
+        font-size: 1rem;
+    }
+}

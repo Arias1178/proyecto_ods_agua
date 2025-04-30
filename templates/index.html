@@ -112,45 +112,45 @@
         <div class="row">
             <div class="col-lg-6 mx-auto">
                 <h2 class="text-center mb-4">Predicción de Calidad del Agua</h2>
-                <form>
+                <form method="POST" action="/">
                     <div class="form-group">
                         <label for="ph">pH del agua:</label>
-                        <input type="number" class="form-control" id="ph" placeholder="Introduce el pH (0 a 14)" required>
+                        <input type="number" class="form-control" id="ph" name="ph" required>
                     </div>
                     <div class="form-group">
                         <label for="hardness">Solidez del agua (mg/L):</label>
-                        <input type="number" class="form-control" id="hardness" placeholder="Introduce la solidez" required>
+                        <input type="number" class="form-control" id="hardness" name="hardness" required>
                     </div>
                     <div class="form-group">
                         <label for="solids">Sólidos totales disueltos (ppm):</label>
-                        <input type="number" class="form-control" id="solids" placeholder="Introduce los sólidos disueltos" required>
+                        <input type="number" class="form-control" id="solids" name="solids" required>
                     </div>
                     <div class="form-group">
                         <label for="chloramines">Cloraminas (ppm):</label>
-                        <input type="number" class="form-control" id="chloramines" placeholder="Introduce la cantidad de cloraminas" required>
+                        <input type="number" class="form-control" id="chloramines" name="chloramines" required>
                     </div>
                     <div class="form-group">
                         <label for="sulfate">Sulfatos (mg/L):</label>
-                        <input type="number" class="form-control" id="sulfate" placeholder="Introduce la cantidad de sulfatos" required>
+                        <input type="number" class="form-control" id="sulfate" name="sulfate" required>
                     </div>
                     <div class="form-group">
                         <label for="conductivity">Conductividad eléctrica (μS/cm):</label>
-                        <input type="number" class="form-control" id="conductivity" placeholder="Introduce la conductividad eléctrica" required>
+                        <input type="number" class="form-control" id="conductivity" name="conductivity" required>
                     </div>
                     <div class="form-group">
                         <label for="organic_carbon">Carbono orgánico (ppm):</label>
-                        <input type="number" class="form-control" id="organic_carbon" placeholder="Introduce el carbono orgánico" required>
+                        <input type="number" class="form-control" id="organic_carbon" name="organic_carbon" required>
                     </div>
                     <div class="form-group">
                         <label for="trihalomethanes">Trihalometanos (μg/L):</label>
-                        <input type="number" class="form-control" id="trihalomethanes" placeholder="Introduce los trihalometanos" required>
+                        <input type="number" class="form-control" id="trihalomethanes" name="trihalomethanes" required>
                     </div>
                     <div class="form-group">
                         <label for="turbidity">Turbidez (NTU):</label>
-                        <input type="number" class="form-control" id="turbidity" placeholder="Introduce la turbidez del agua" required>
+                        <input type="number" class="form-control" id="turbidity" name="turbidity" required>
                     </div>
                     <button type="submit" class="btn btn-primary btn-block mt-3">Predecir Calidad del Agua</button>
-                </form>
+                </form>                
             </div>
         </div>
     </div>

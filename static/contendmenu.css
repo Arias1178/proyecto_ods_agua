@@ -1,11 +1,25 @@
 body {
     min-height: 100vh;
     background: linear-gradient(#051f30, #000000);
+    
 }
 
 h1{
- color: rgb(213, 213, 213);
+ color: rgb(255, 255, 255);
  text-align: center;
+}
+h2{
+   color: rgb(255, 255, 255);
+ text-align: center; 
+}
+
+.pantalla-completa {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Altura completa de la pantalla */
+    background-color: #ffffff12; /* Opcional: color de fondo */
+    padding: 20px;
 }
 .cuadro {
     background-color: #fff;
@@ -23,7 +37,7 @@ h1{
 }
 
 .cuadro p {
-    color: #444;
+    color: #ffffff;
     font-size: 1rem;
     line-height: 1.6;
 }

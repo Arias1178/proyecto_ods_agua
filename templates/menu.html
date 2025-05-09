@@ -18,12 +18,12 @@
     <ul class="menu-content">
         <li><a href="{{ url_for('index') }}"><span class="material-symbols-outlined">campaign</span><span>Campaña</span></a></li>
         <!-- Agrega más opciones cuando tengas más rutas -->
-        <li><a href="#"><span class="material-symbols-outlined">dashboard</span><span>ODS</span></a></li>
-        <li><a href="#"><span class="material-symbols-outlined">explore</span><span>Analisis de Viabilidad</span></a></li>
-        <li><a href="#"><span class="material-symbols-outlined">analytics</span><span>Justificacion</span></a></li>
-        <li><a href="#"><span class="material-symbols-outlined">settings</span><span>Objetivo De Negocio</span></a></li>
-        <li><a href="#"><span class="material-symbols-outlined">person</span><span>Preguntas Claves</span></a></li>
-        <li><a href="#"><span class="material-symbols-outlined">report</span><span>Evaluacion De Datos</span></a></li>
+        <li><a href="{{ url_for('ods') }}"><span class="material-symbols-outlined">dashboard</span><span>ODS</span></a></li>
+        <li><a href="{{ url_for('viabilidad') }}"><span class="material-symbols-outlined">explore</span><span>Analisis de Viabilidad</span></a></li>
+        <li><a href="{{ url_for('justificacion') }}"><span class="material-symbols-outlined">analytics</span><span>Justificacion</span></a></li>
+        <li><a href="{{ url_for('objetivoneg') }}"><span class="material-symbols-outlined">settings</span><span>Objetivo De Negocio</span></a></li>
+        <li><a href="{{ url_for('preguntas') }}"><span class="material-symbols-outlined">person</span><span>Preguntas Claves</span></a></li>
+        <li><a href="{{ url_for('evaluacion') }}"><span class="material-symbols-outlined">report</span><span>Evaluacion De Datos</span></a></li>
     </ul>
 </div>
 </body>

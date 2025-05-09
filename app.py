@@ -16,7 +16,35 @@ def menu_formulario():
         seccion = request.form.get("seccion")
     return render_template("menu.html", seccion=seccion)
 
+#ODS
+@app.route("/ods/")
+def mapaHTML():
+    return render_template("ods.html")
 
+#Analisis de viabilidad
+@app.route("/viabilidad/")
+def mapaHTML():
+    return render_template("viabilidad.html")
+
+#Justificacion
+@app.route("/justificacion/")
+def mapaHTML():
+    return render_template("justificacion.html")
+
+#Objetivos de negocio
+@app.route("/objetivoneg/")
+def mapaHTML():
+    return render_template("objetivoneg.html")
+
+#Preguntas Claves
+@app.route("/preguntas/")
+def mapaHTML():
+    return render_template("preguntas.html")
+
+#Evaluacion de Datos
+@app.route("/evaluacion/")
+def mapaHTML():
+    return render_template("evaluacion.html")
 
 @app.route("/Campaña", methods=["GET", "POST"])
 def index():

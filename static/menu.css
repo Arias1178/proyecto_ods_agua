@@ -18,7 +18,7 @@ h1{
     position: fixed;
     top: 0;
     left: 0;
-    width: 85px;
+    width: 100px;
     height: 100%;
     transition: .3s;
     scrollbar-width: none;
@@ -31,7 +31,7 @@ h1{
 }
 
 .menu:hover {
-    width: 260px;
+    width: 300px;
 }
 
 .menu:hover li span:nth-child(2) {

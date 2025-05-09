@@ -16,6 +16,8 @@ def menu_formulario():
         seccion = request.form.get("seccion")
     return render_template("menu.html", seccion=seccion)
 
+
+
 @app.route("/Campaña", methods=["GET", "POST"])
 def index():
     if request.method == 'POST':

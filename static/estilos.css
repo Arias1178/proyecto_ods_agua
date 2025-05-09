@@ -32,6 +32,38 @@ h2{
 
 /* Carousel Styles */
 #header-carousel .carousel-item img {
+    object-fit: cover; /* Mantiene la imagen recortada de manera proporcional */
+    height: 400px; /* Ajusta la altura de la imagen */
+    max-width: 80%; /* Limita el ancho máximo al 80% del contenedor */
+    margin: 0 auto; /* Centra la imagen dentro del contenedor */
+}
+
+/* Controles de flechas */
+.carousel-control-prev, .carousel-control-next {
+    color: #000000; /* Color para las flechas */
+    font-size: 2rem; /* Tamaño de las flechas */
+}
+
+/* Si quieres cambiar el color de fondo de las flechas cuando se pasa el cursor por encima */
+.carousel-control-prev:hover, .carousel-control-next:hover {
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro para las flechas al pasar el cursor */
+}
+
+/* Ajustes de la fuente en el carrusel */
+.carousel-caption h1 {
+    font-size: 2rem; /* Reducir el tamaño del texto */
+}
+
+.carousel-caption a {
+    font-size: 1rem; /* Ajustar el tamaño de la fuente del botón */
+}
+
+/* Para asegurar que el contenido del carrusel no se sobreponga */
+.carousel-caption {
+    padding: 1rem 2rem;
+}
+
+#header-carousel .carousel-item img {
     object-fit: cover;
     height: 100vh;
 }

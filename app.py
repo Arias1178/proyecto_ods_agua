@@ -8,7 +8,15 @@ app = Flask(__name__)
 # Cargar el modelo entrenado
 modelo = joblib.load("modelo_agua.pkl")
 
+#Menu
 @app.route("/", methods=["GET", "POST"])
+def menu_formulario():
+    seccion = None
+    if request.method == "POST":
+        seccion = request.form.get("seccion")
+    return render_template("menu.html", seccion=seccion)
+
+@app.route("/Campaña", methods=["GET", "POST"])
 def index():
     if request.method == 'POST':
         # Recibir los datos del formulario

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='menu.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+</head>
+<body>
+<div class="menu">
+    <ul class="menu-content">
+        <li><a href="{{ url_for('index') }}"><span class="material-symbols-outlined">campaign</span><span>Campaña</span></a></li>
+        <!-- Agrega más opciones cuando tengas más rutas -->
+        <li><a href="#"><span class="material-symbols-outlined">dashboard</span><span>DashBoard</span></a></li>
+        <li><a href="#"><span class="material-symbols-outlined">explore</span><span>Explore</span></a></li>
+        <li><a href="#"><span class="material-symbols-outlined">analytics</span><span>Analytics</span></a></li>
+        <li><a href="#"><span class="material-symbols-outlined">settings</span><span>Settings</span></a></li>
+        <li><a href="#"><span class="material-symbols-outlined">person</span><span>Account</span></a></li>
+        <li><a href="#"><span class="material-symbols-outlined">report</span><span>Report</span></a></li>
+        <li><a href="#"><span class="material-symbols-outlined">email</span><span>Contact</span></a></li>
+        <li><a href="#"><span class="material-symbols-outlined">logout</span><span>Logout</span></a></li>
+    </ul>
+</div>
+</body>
+</html>

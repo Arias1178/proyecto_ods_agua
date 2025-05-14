@@ -9,8 +9,35 @@
 <body>
     <section class="pantalla-completa">
         <div class="cuadro sombra">
-            <h2>¿Quiénes somos?</h2>
-            <p>El Machine Learning supervisado tiene muchos casos de uso en distintas industrias. Aquí algunos ejemplos:</p>
+            <h2>Evaluacion de Datos</h2>
+            <p>Para el desarrollo del modelo de predicción de potabilidad del agua, se utilizó un conjunto de datos que incluye características físico-químicas del agua como:
+pH,
+Dureza (Hardness),
+Sólidos totales disueltos (Solids),
+Cloraminas (Chloramines),
+Sulfatos (Sulfate),
+Conductividad (Conductivity),
+Carbono orgánico (Organic_carbon),
+Trihalometanos (Trihalomethanes),
+Turbidez (Turbidity),
+Potabilidad (Potability - variable objetivo).</p>
+<p>
+1. Calidad de los Datos
+Datos faltantes: Se identificaron valores faltantes en algunas columnas (por ejemplo, Sulfate y Trihalomethanes). Estos valores fueron tratados mediante imputación (relleno con la media) para evitar sesgos en el entrenamiento.
+Valores atípicos: Se detectaron algunos valores extremos, especialmente en Solids y Conductivity, los cuales fueron analizados y normalizados si fue necesario.
+Formato consistente: Todos los registros fueron revisados para asegurar que los datos estuvieran en formato numérico adecuado para el modelo.
+</p>
+<p>
+2. Relevancia de los Datos
+Las variables seleccionadas son altamente relevantes para evaluar la calidad del agua, ya que están alineadas con los estándares utilizados por organismos internacionales como la OMS y la EPA.
+Cada característica representa un factor que influye directamente en la salud y potabilidad del agua.
+</p>
+<p>
+3. Suficiencia de los Datos
+El conjunto de datos original contiene aproximadamente 3.276 registros, lo cual es suficiente para entrenar un modelo de clasificación binaria de forma efectiva.
+Se realizó una división de los datos en conjunto de entrenamiento y prueba, garantizando una evaluación objetiva del rendimiento del modelo.
+A pesar de ser un dataset balanceado de forma moderada (potable vs no potable), se consideraron técnicas para evitar el sobreajuste y mejorar la generalización.
+</p>
         </div>   
     </div>
 </section>

@@ -1,18 +1,45 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Objetivo de negocio</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='contendmenu.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='objetivos.css') }}">
 </head>
 <body>
-      <section class="pantalla-completa">
-        <div class="cuadro sombra">
-            <h2>¿Quiénes somos?</h2>
-            <p>El Machine Learning supervisado tiene muchos casos de uso en distintas industrias. Aquí algunos ejemplos:</p>
-        </div>   
-    </div>
-</section>
+
+    <h1>Proyecto ODS: Agua limpia y saneamiento</h1>
+
+    <section class="pantalla-completa">
+        <div class="contenedor-cuadros">
+            
+            <div class="cuadro sombra">
+                <h2>Objetivos de negocio</h2>
+                <p>
+                    Con el modelo de machine learning se busca generar un sistema fiable para saber si el agua, dependiendo de distintos datos, diga si esta contaminada o no y si esta puede llegar a ser tratada. Con el resultado del estado, se puede reducir el tiempo y los costos de los análisis tradicionales, automatizándolos con una alta precisión. Este rápido análisis permite tomar acciones con mayor prontitud para tratar o proteger las fuentes hídricas, apoyando y respaldando las decisiones de entes ambientales encargados.
+                </p>
+            </div>   
+
+            <div class="cuadro sombra">
+                <h2>Objetivo General</h2>
+                <p>
+                    Desarrollar una aplicación web interactiva basada en el ODS N.º 6: Agua limpia y saneamiento, que permita predecir la potabilidad del agua mediante técnicas de machine learning, con el fin de concientizar a la población sobre la calidad del agua y promover prácticas responsables de consumo.
+                </p>
+            </div>
+
+            <div class="cuadro sombra">
+                <h2>Objetivos Específicos</h2>
+                <p>
+                    Recolectar y analizar un conjunto de datos sobre la calidad del agua, considerando variables como pH, dureza, sólidos, cloraminas, sulfatos, entre otros.<br><br>
+                    Entrenar un modelo predictivo (XGBoost) que clasifique si el agua es potable o no, con base en las variables analizadas.<br><br>
+                    Diseñar e implementar una interfaz web accesible y atractiva que permita al usuario ingresar datos de calidad del agua y obtener un diagnóstico inmediato.<br><br>
+                    Integrar una campaña educativa dentro de la plataforma, utilizando elementos visuales (como Pokémon de agua) para promover el conocimiento del ODS 6 de forma lúdica e inclusiva.<br><br>
+                    Publicar el proyecto en un repositorio colaborativo (GitHub o similar) que permita el seguimiento, retroalimentación y futuras mejoras del sistema.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
 </body>
 </html>

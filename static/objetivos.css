@@ -1,0 +1,47 @@
+body {
+    min-height: 100vh;
+    background: linear-gradient(#051f30, #000000);
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+h1, h2 {
+    color: rgb(255, 255, 255);
+    text-align: center;
+}
+
+/* Contenedor principal en horizontal */
+.contenedor-cuadros {
+    display: flex;
+    justify-content: center;
+    gap: 30px; /* Espacio entre cuadros */
+    padding: 40px;
+    flex-wrap: wrap; /* Se adaptan si no caben */
+}
+
+/* Cuadros alineados horizontalmente */
+.cuadro {
+    background-color: #0a1f2f;
+    color: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    width: 300px;
+    transition: transform 0.3s;
+}
+
+.cuadro:hover {
+    transform: scale(1.02);
+}
+
+.cuadro h1 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+}
+
+.cuadro p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: #e0e0e0;
+}

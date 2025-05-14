@@ -1,26 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="utf-8">
     <title>Agua Limpia - Predicción de Calidad del Agua</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="Campaña sobre agua limpia y saneamiento" name="keywords">
-    <meta content="Campaña de predicción de calidad del agua" name="description">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Campaña sobre agua limpia y saneamiento">
+    <meta name="description" content="Campaña de predicción de calidad del agua">
 
     <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon">
+    <link rel="icon" href="{{ url_for('static', filename='img/favicon.ico') }}">
 
-    <!-- Google Web Fonts -->
-    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;800&display=swap" rel="stylesheet">
 
     <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css" rel="stylesheet">
 
-    <!-- Customized Bootstrap Stylesheet -->
+    <!-- Estilos personalizados -->
     <link rel="stylesheet" href="{{ url_for('static', filename='estilos.css') }}">
-    
 </head>
 
 <body>
@@ -28,150 +26,96 @@
     <div class="container-fluid bg-primary py-3">
         <div class="container">
             <div class="row">
-                <div class="col-md-6 text-center text-lg-left mb-2 mb-lg-0">
-                    <div class="d-inline-flex align-items-center">
-                        <a class="text-white pr-3" href="">Proyecto ML</a>
-                        <span class="text-white">|</span>
-                        <a class="text-white px-3" href="">Campaña Sobre El Agua</a>
-                        <span class="text-white">|</span>
-                        <a class="text-white pl-3" href="">XGBoost</a>
-                    </div>
-                </div>
-    <!-- Final Borde -->
-
-
-    <!-- Segundo Borde -->
-    <div class="container-fluid position-relative nav-bar p-0">
-        <div class="container-lg position-relative p-0 px-lg-3" style="z-index: 9;">
-            <nav class="navbar navbar-expand-lg bg-white navbar-light py-3 py-lg-0 pl-3 pl-lg-5">
-                <!-- Encabezado centrado -->
-<header style="background-color: #007bff; padding: 20px; text-align: center;">
-    <h1 style="color: white; margin: 0;">Agua Limpia y no contaminate</h1>
-  </header>
- <section class="container-fluid position-relative nav-bar p-0 sombra">
-    <h2>Quienes somos</h2>
-    <p>El Machine Learning supervisado tiene muchos casos de uso en distintas industrias. Aquí algunos ejemplos: </p>
-    <div class="contenedor">
-        <div class ="cuadro sombra">
-            <h2>Porque</h2>
-    <p>
-       - Detección de fraudes en transacciones bancarias.
-    </p>
-    <p>
-       - Predicción de riesgo crediticio.
-    </p>
-        </div>
-        <div class ="cuadro sombra">
-            <h2>Que queremos</h2>
-    <p>
-        - Diagnóstico de enfermedades basado en imágenes médicas.
-    </p>
-    <P>
-        - Predicción de posibles brotes de enfermedades.
-    </p>
-        </div>
-        <div class ="cuadro sombra">
-            <h2>Campaña</h2>
-    <p>
-        - Recomendación de productos (ej. Netflix, Amazon).
-    </p>
-    <P>
-        - Análisis de abandono de clientes (churn prediction).
-    </p>
-        </div>
-        
-            
- </section>
-                  
-    <!-- Final Segundo Borde -->
-
-
- <!-- Carusel fotos-->
-<div class="container-fluid p-0">
-    <div id="header-carousel" class="carousel slide" data-ride="carousel">
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img src="{{ url_for('static', filename='img/Bulba.jpg') }}" alt="Imagen" class="d-block mx-auto" style="max-width: 80%; height: auto;">
-                <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
-                    <div class="p-3" style="max-width: 900px;">
-                        <h4 class="text-white text-uppercase mb-md-3">Calidad del Agua</h4>
-                        <h1 class="display-3 text-white mb-md-4">¿Está el agua que consumes limpia?</h1>
-                        <a href="#formulario" class="btn btn-primary py-md-3 px-md-5 mt-2">Descubre ahora</a>
-                    </div>
+                <div class="col text-center text-white">
+                    <a class="text-white px-2" href="#">Proyecto ML</a> |
+                    <a class="text-white px-2" href="#">Campaña Sobre El Agua</a> |
+                    <a class="text-white px-2" href="#">XGBoost</a>
                 </div>
             </div>
         </div>
-        <!-- Controles de flechas para navegar entre las imágenes -->
-        <a class="carousel-control-prev" href="#header-carousel" role="button" data-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#header-carousel" role="button" data-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-        </a>
+    </div>
+
+    <!-- Encabezado -->
+    <header class="header-principal">
+        <h1>Agua Limpia y No Contaminante</h1>
+    </header>
+
+    <!-- Sección Quiénes Somos -->
+    <section class="contenedor seccion-info">
+        <h2>¿Quiénes somos?</h2>
+        <p>El Machine Learning supervisado tiene muchos casos de uso en distintas industrias. Aquí algunos ejemplos:</p>
+        <div class="contenedor-cuadros">
+            <div class="cuadro sombra">
+                <h3>¿Por qué?</h3>
+                <ul>
+                    <li>Detección de fraudes en transacciones bancarias.</li>
+                    <li>Predicción de riesgo crediticio.</li>
+                </ul>
+            </div>
+            <div class="cuadro sombra">
+                <h3>¿Qué queremos?</h3>
+                <ul>
+                    <li>Diagnóstico de enfermedades basado en imágenes médicas.</li>
+                    <li>Predicción de posibles brotes de enfermedades.</li>
+                </ul>
+            </div>
+            <div class="cuadro sombra">
+                <h3>Campaña</h3>
+                <ul>
+                    <li>Recomendación de productos (Netflix, Amazon).</li>
+                    <li>Análisis de abandono de clientes (churn prediction).</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Carrusel -->
+    <div class="container-fluid p-0">
+        <div id="header-carousel" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="{{ url_for('static', filename='img/Bulba.jpg') }}" class="d-block mx-auto" style="max-width: 80%;" alt="Imagen Pokémon">
+                    <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                        <div class="p-3" style="max-width: 900px;">
+                            <h4 class="text-white text-uppercase mb-3">Calidad del Agua</h4>
+                            <h1 class="text-white mb-4">¿Está el agua que consumes limpia?</h1>
+                            <a href="#formulario" class="btn btn-primary">Descubre ahora</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#header-carousel" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </a>
+            <a class="carousel-control-next" href="#header-carousel" role="button" data-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </a>
+        </div>
+    </div>
+<!-- Formulario -->
+<div id="formulario" class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-6 cuadro p-4">
+            <h2 class="text-center mb-4">Predicción de Calidad del Agua</h2>
+            <form method="POST" action="/">
+                {% for campo in ['ph', 'hardness', 'solids', 'chloramines', 'sulfate', 'conductivity', 'organic_carbon', 'trihalomethanes', 'turbidity'] %}
+                <div class="form-group mb-3">
+                    <label for="{{ campo }}">{{ campo.replace('_', ' ').capitalize() }}:</label>
+                    <input type="number" class="form-control" id="{{ campo }}" name="{{ campo }}" required>
+                </div>
+                {% endfor %}
+                <div class="text-center">
+                    <button type="submit" class="btn btn-primary mt-3">Predecir Calidad del Agua</button>
+                </div>
+            </form>
+        </div>
     </div>
 </div>
-<!-- Carusel fotos -->
-
-
-    <!-- Formulario para la predicción de calidad del agua Start -->
-    <div id="formulario" class="container py-5">
-        <div class="row">
-            <div class="col-lg-6 mx-auto">
-                <h2 class="text-center mb-4">Predicción de Calidad del Agua</h2>
-                <form method="POST" action="/">
-                    <div class="form-group">
-                        <label for="ph">pH del agua:</label>
-                        <input type="number" class="form-control" id="ph" name="ph" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="hardness">Solidez del agua (mg/L):</label>
-                        <input type="number" class="form-control" id="hardness" name="hardness" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="solids">Sólidos totales disueltos (ppm):</label>
-                        <input type="number" class="form-control" id="solids" name="solids" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="chloramines">Cloraminas (ppm):</label>
-                        <input type="number" class="form-control" id="chloramines" name="chloramines" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="sulfate">Sulfatos (mg/L):</label>
-                        <input type="number" class="form-control" id="sulfate" name="sulfate" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="conductivity">Conductividad eléctrica (μS/cm):</label>
-                        <input type="number" class="form-control" id="conductivity" name="conductivity" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="organic_carbon">Carbono orgánico (ppm):</label>
-                        <input type="number" class="form-control" id="organic_carbon" name="organic_carbon" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="trihalomethanes">Trihalometanos (μg/L):</label>
-                        <input type="number" class="form-control" id="trihalomethanes" name="trihalomethanes" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="turbidity">Turbidez (NTU):</label>
-                        <input type="number" class="form-control" id="turbidity" name="turbidity" required>
-                    </div>
-                    <button type="submit" class="btn btn-primary btn-block mt-3">Predecir Calidad del Agua</button>
-                </form>                
-            </div>
-        </div>
-    </div>
-    <!-- Formulario para la predicción de calidad del agua End -->
-
-    <!-- Footer Start -->
-    <div class="container-fluid bg-secondary text-white py-4">
-        <div class="container text-center">
-            <p class="mb-0">© 2025 Agua Limpia - Todos los derechos reservados.</p>
-            <p class="mb-0">Creado por Ian Galindo y Santiago Arias</p>
-        </div>
-    </div>
-    <!-- Footer End -->
-
+    <!-- Footer -->
+    <footer class="bg-secondary text-white text-center py-4">
+        <p class="mb-0">© 2025 Agua Limpia - Todos los derechos reservados.</p>
+        <p class="mb-0">Creado por Ian Galindo y Santiago Arias</p>
+    </footer>
 </body>
+
 </html>

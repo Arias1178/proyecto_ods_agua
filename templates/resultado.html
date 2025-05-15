@@ -3,11 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <title>Resultado</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='estilos.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='resul.css') }}">
 </head>
 <body>
     <h1>Resultado del Diagnóstico 🧪</h1>
-    <p>{{ prediccion }}</p> <!-- Aquí se muestra el resultado de la predicción -->
+    <p>{{ prediccion }}</p> <section class="contenedor-acciones">
+        <h2>¿Qué hacer si el agua está contaminada?</h2>
+        <div class="contenedor-cuadros-acciones">
+            <div class="cuadro-accion sombra">
+                <h3>No consumir</h3>
+                <p>Evita beber o usar el agua para cocinar inmediatamente.</p>
+            </div>
+            <div class="cuadro-accion sombra">
+                <h3>Informar</h3>
+                <p>Contacta a las autoridades locales o a la empresa de suministro de agua.</p>
+            </div>
+            <div class="cuadro-accion sombra">
+                <h3>Buscar alternativas</h3>
+                <p>Utiliza agua embotellada o de fuentes seguras hasta que se solucione el problema.</p>
+            </div>
+            <div class="cuadro-accion sombra">
+                <h3>Seguir indicaciones</h3>
+                <p>Atiende las recomendaciones de los expertos y las autoridades.</p>
+            </div>
+        </div>
+    </section>
+
     <a href="/">Volver al inicio</a>
 </body>
 </html>

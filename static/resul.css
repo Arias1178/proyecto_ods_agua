@@ -1,0 +1,121 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    background: linear-gradient(#051f30, #000000);
+    color: white;
+    margin: 0;
+    padding: 20px; /* Añade un poco de espacio alrededor del contenido */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra el contenido horizontalmente */
+    justify-content: flex-start; /* Alinea el contenido al inicio verticalmente para evitar que se pegue al centro si la ventana es muy alta */
+    min-height: 100vh; /* Asegura que el body ocupe al menos toda la altura de la ventana */
+    box-sizing: border-box; /* Incluye el padding y el border en el ancho y alto del elemento */
+}
+
+h1 {
+    color: #007bff; /* Manteniendo el color azul para el título */
+    text-align: center;
+    margin-top: 50px; /* Añade un margen superior para separarlo del borde de la ventana */
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+
+p {
+    background: linear-gradient(#051f30, #000000);
+    color: #ffffff; /* Texto oscuro para contraste */
+    padding: 30px; /* Aumenta el padding para que se vea más como un cuadro */
+    border-radius: 10px;
+    margin-bottom: 30px;
+    font-size: 1.5rem; /* Aumenta el tamaño de la fuente del resultado */
+    line-height: 1.6;
+    text-align: center;
+    max-width: 80%; /* Limita el ancho del párrafo para mejor legibilidad */
+    box-shadow: 0 5px 15px rgba(112, 112, 112, 1); /* Sombra similar a los cuadros anteriores */
+}
+
+a {
+    color: #007bff; /* Color azul para el enlace */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+    border: 2px solid #007bff; /* Añade un borde */
+    padding: 10px 20px;
+    border-radius: 8px;
+}
+
+a:hover {
+    color: #ffffff;
+    background-color: #007bff; /* Fondo azul al pasar el ratón */
+}
+/* ... otros estilos de la página de resultados ... */
+
+.contenedor-acciones {
+    margin-top: 40px;
+    text-align: center;
+    color: white; /* Mantener el color del texto blanco en esta sección también */
+    padding: 20px; /* Añadir un poco de espacio alrededor */
+}
+
+.contenedor-acciones h2 {
+    color: #007bff; /* Título de la sección en azul */
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
+.contenedor-cuadros-acciones {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap; /* Para que se envuelvan en pantallas pequeñas */
+    margin-top: 20px;
+}
+
+.cuadro-accion {
+    background: linear-gradient(#051f30, #000000);/* Fondo similar al párrafo de resultado inicial */
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    flex: 1 1 250px; /* Ancho base y permitir crecer/decrecer */
+    max-width: 300px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.cuadro-accion h3 {
+    color: #007bff; /* Títulos de los cuadros en azul */
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 1.3rem;
+}
+
+.cuadro-accion p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 0;
+    background-color: transparent; /* Para que no herede el fondo blanco del párrafo principal */
+    box-shadow: none; /* Para que no herede la sombra del párrafo principal */
+    padding: 0;
+    max-width: 100%; /* Asegurar que el texto se ajuste al cuadro */
+}
+
+/* Estilos de sombra reutilizable (si no los tienes ya) */
+.sombra {
+    -webkit-box-shadow: 0px 5px 15px 0px rgba(112,112,112,1);
+    -moz-box-shadow: 0px 5px 15px 0px rgba(112,112,112,1);
+    box-shadow: 0px 5px 15px 0px rgba(112,112,112,1);
+}
+
+/* Responsive para los cuadros de acción */
+@media (max-width: 768px) {
+    .contenedor-cuadros-acciones {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cuadro-accion {
+        width: 90%;
+        max-width: none;
+        margin-bottom: 20px;
+    }
+}

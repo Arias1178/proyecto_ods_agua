@@ -74,12 +74,11 @@
         <div id="header-carousel" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="{{ url_for('static', filename='img/Bulba.jpg') }}" class="d-block mx-auto" style="max-width: 80%;" alt="Imagen Pokémon">
                     <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                         <div class="p-3" style="max-width: 900px;">
                             <h4 class="text-white text-uppercase mb-3">Calidad del Agua</h4>
                             <h1 class="text-white mb-4">¿Está el agua que consumes limpia?</h1>
-                            <a href="#formulario" class="btn btn-primary">Descubre ahora</a>
+                            <button type="submit" href="#formulario" class="btn btn-primary btn-block">Descubre ahora</button>
                         </div>
                     </div>
                 </div>
@@ -92,25 +91,35 @@
             </a>
         </div>
     </div>
-<!-- Formulario -->
-<div id="formulario" class="container py-5">
-    <div class="row justify-content-center">
-        <div class="col-lg-6 cuadro p-4">
-            <h2 class="text-center mb-4">Predicción de Calidad del Agua</h2>
-            <form method="POST" action="/">
-                {% for campo in ['ph', 'hardness', 'solids', 'chloramines', 'sulfate', 'conductivity', 'organic_carbon', 'trihalomethanes', 'turbidity'] %}
-                <div class="form-group mb-3">
-                    <label for="{{ campo }}">{{ campo.replace('_', ' ').capitalize() }}:</label>
-                    <input type="number" class="form-control" id="{{ campo }}" name="{{ campo }}" required>
-                </div>
-                {% endfor %}
-                <div class="text-center">
-                    <button type="submit" class="btn btn-primary mt-3">Predecir Calidad del Agua</button>
-                </div>
-            </form>
+
+    <!-- Formulario -->
+    <div id="formulario" class="container py-5 cuadro-formulario">
+        <div class="row">
+            <div class="col-lg-6 mx-auto">
+                <h2 class="text-center mb-4">Predicción de Calidad del Agua</h2>
+                <form method="POST" action="/Campaña">
+                    {% for campo in [
+                        ('ph', 'pH del agua'),
+                        ('hardness', 'Solidez del agua (mg/L)'),
+                        ('solids', 'Sólidos totales disueltos (ppm)'),
+                        ('chloramines', 'Cloraminas (ppm)'),
+                        ('sulfate', 'Sulfatos (mg/L)'),
+                        ('conductivity', 'Conductividad eléctrica (μS/cm)'),
+                        ('organic_carbon', 'Carbono orgánico (ppm)'),
+                        ('trihalomethanes', 'Trihalometanos (μg/L)'),
+                        ('turbidity', 'Turbidez (NTU)')
+                    ] %}
+                    <div class="form-group">
+                        <label for="{{ campo[0] }}">{{ campo[1] }}:</label>
+                        <input type="number" class="form-control" id="{{ campo[0] }}" name="{{ campo[0] }}" required>
+                    </div>
+                    {% endfor %}
+                    <button type="submit" class="btn btn-primary btn-block">Predecir Calidad del Agua</button>
+                </form>
+            </div>
         </div>
     </div>
-</div>
+
     <!-- Footer -->
     <footer class="bg-secondary text-white text-center py-4">
         <p class="mb-0">© 2025 Agua Limpia - Todos los derechos reservados.</p>

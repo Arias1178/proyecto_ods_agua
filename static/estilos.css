@@ -1,84 +1,162 @@
 body {
-    min-height: 100vh;
-    background: linear-gradient(#051f30, #000000);
     font-family: 'Open Sans', sans-serif;
+    background: linear-gradient(#051f30, #000000);
+    color: white;
     margin: 0;
     padding: 0;
-    color: rgb(213, 213, 213);
 }
 
-h1, h2, label {
-    color: rgb(213, 213, 213);
-    text-align: center;
-}
-
-#formulario {
-    padding-left: 120px; /* espacio para el menú lateral */
-    padding-top: 60px;
-    padding-bottom: 60px;
-    background: linear-gradient(to bottom, #001f3f, #000000);
-    min-height: 100vh;
-}
-
-#formulario .cuadro {
-    background-color: rgba(255, 255, 255, 0.08);
-    border-radius: 20px;
-    padding: 30px;
-    max-width: 600px;
-    margin: auto;
-    box-shadow: 0px 8px 16px rgba(255, 255, 255, 0.2);
-    backdrop-filter: blur(8px);
-}
-
-#formulario label {
-    font-weight: 600;
-    margin-bottom: 5px;
-    display: block;
-    color: #ddd;
-}
-
-#formulario input[type="number"] {
-    width: 100%;
-    padding: 12px;
-    border-radius: 10px;
-    border: none;
-    margin-bottom: 15px;
-    background-color: rgba(255, 255, 255, 0.2);
-    color: #fff;
-    box-shadow: inset 0 0 5px rgba(255, 255, 255, 0.2);
-}
-
-#formulario input[type="number"]::placeholder {
-    color: #ccc;
-}
-
-/* Botón */
-.btn {
-    font-weight: 600;
-    border-radius: 10px;
-    font-size: 16px;
-    padding: 12px 30px;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.btn-primary {
-    background-color: #00bcd4;
+/* Encabezados */
+h2, h1 {
+    text-align: center; 
     color: white;
 }
 
-.btn-primary:hover {
-    background-color: #0097a7;
+/* Navbar */
+.navbar {
+    background: linear-gradient(#051f30, #000000);
 }
 
-/* Estilo responsive */
+.navbar a {
+    color: white !important;
+    font-size: 16px;
+}
+
+.navbar-brand h1 {
+    color: #fff;
+    font-weight: 600;
+}
+
+.navbar-toggler-icon {
+    background-color: white;
+}
+
+/* Formulario */
+#formulario {
+    background: linear-gradient(#051f30, #000000);
+    color: white;
+    padding: 4rem 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 700px;
+    margin: 3rem auto;
+    color: #333;
+}
+
+#formulario h2 {
+    color: #007bff;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.form-control {
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 1.5rem;
+    transition: all 0.3s;
+}
+
+.form-control:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+button[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    padding: 1rem;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100%;
+    transition: all 0.3s;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* Footer */
+footer {
+    background: linear-gradient(#051f30, #000000);
+    color: white;
+    color: white;
+    text-align: center;
+    padding: 1.5rem 0;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Topbar */
+.container-fluid.bg-primary {
+    background: linear-gradient(#051f30, #000000);
+}
+
+.container-fluid.bg-primary .text-white {
+    color: white;
+}
+
+.container-fluid.bg-primary .d-inline-flex a {
+    margin-right: 1rem;
+}
+
+/* Cuadros Centrales */
+.contenedor {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 20px;
+    max-width: 1400px;
+    margin: 3rem auto;
+}
+
+.cuadro {
+    background: linear-gradient(#051f30, #000000);
+    color: white;
+    padding: 40px;
+    text-align: center;
+    font-size: 1.5rem;
+    border-radius: 30px;
+    border: 2px solid #0056b3;
+    flex: 1 1 300px; /* flex-grow, flex-shrink, flex-basis */
+    max-width: 400px;
+    transition: transform 0.3s;
+}
+
+.cuadro:hover {
+    transform: scale(1.03);
+}
+
+/* Sombra reutilizable */
+.sombra {
+    -webkit-box-shadow: 0px 5px 15px 0px rgba(112,112,112,1);
+    -moz-box-shadow: 0px 5px 15px 0px rgba(112,112,112,1);
+    box-shadow: 0px 5px 15px 0px rgba(112,112,112,1);
+    background-color: #ffffff;
+    padding: 1rem;
+    box-sizing: border-box;
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+/* Responsive */
 @media (max-width: 768px) {
-    #formulario {
-        padding-left: 100px;
+    .contenedor {
+        flex-direction: column;
+        align-items: center;
     }
 
-    #formulario .cuadro {
-        width: 90%;
+    #formulario {
+        padding: 2rem 1rem;
     }
 }

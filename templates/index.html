@@ -8,21 +8,16 @@
     <meta name="keywords" content="Campaña sobre agua limpia y saneamiento">
     <meta name="description" content="Campaña de predicción de calidad del agua">
 
-    <!-- Favicon -->
     <link rel="icon" href="{{ url_for('static', filename='img/favicon.ico') }}">
 
-    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;800&display=swap" rel="stylesheet">
 
-    <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css" rel="stylesheet">
 
-    <!-- Estilos personalizados -->
     <link rel="stylesheet" href="{{ url_for('static', filename='estilos.css') }}">
 </head>
 
 <body>
-    <!-- Borde Superior -->
     <div class="container-fluid bg-primary py-3">
         <div class="container">
             <div class="row">
@@ -35,15 +30,16 @@
         </div>
     </div>
 
-    <!-- Encabezado -->
     <header class="header-principal">
         <h1>Agua Limpia y No Contaminante</h1>
     </header>
 
-    <!-- Sección Quiénes Somos -->
-    <section class="contenedor seccion-info">
+    <section class="seccion-quienes-somos contenedor">
         <h2>¿Quiénes somos?</h2>
         <p>El Machine Learning supervisado tiene muchos casos de uso en distintas industrias. Aquí algunos ejemplos:</p>
+    </section>
+
+    <section class="contenedor-principal contenedor">
         <div class="contenedor-cuadros">
             <div class="cuadro sombra">
                 <h3>¿Por qué?</h3>
@@ -69,30 +65,16 @@
         </div>
     </section>
 
-    <!-- Carrusel -->
-    <div class="container-fluid p-0">
-        <div id="header-carousel" class="carousel slide" data-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
-                        <div class="p-3" style="max-width: 900px;">
-                            <h4 class="text-white text-uppercase mb-3">Calidad del Agua</h4>
-                            <h1 class="text-white mb-4">¿Está el agua que consumes limpia?</h1>
-                            <button type="submit" href="#formulario" class="btn btn-primary btn-block">Descubre ahora</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <a class="carousel-control-prev" href="#header-carousel" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon"></span>
-            </a>
-            <a class="carousel-control-next" href="#header-carousel" role="button" data-slide="next">
-                <span class="carousel-control-next-icon"></span>
-            </a>
-        </div>
+    <section class="seccion-campana contenedor">
+    <div class="mensaje-campana">
+        <h2>¡Actúa por el Agua Limpia!</h2>
+        <p class="frase-campana">Cada gota cuenta.</p>
+        <p class="frase-campana">El agua es vida, ¡protégela!</p>
+        <p class="frase-campana">Unidos contra la contaminación.</p>
+        <a href="#formulario" class="btn btn-primary btn-block boton-descubre">Descubre ahora</a>
     </div>
+</section>
 
-    <!-- Formulario -->
     <div id="formulario" class="container py-5 cuadro-formulario">
         <div class="row">
             <div class="col-lg-6 mx-auto">
@@ -120,7 +102,6 @@
         </div>
     </div>
 
-    <!-- Footer -->
     <footer class="bg-secondary text-white text-center py-4">
         <p class="mb-0">© 2025 Agua Limpia - Todos los derechos reservados.</p>
         <p class="mb-0">Creado por Ian Galindo y Santiago Arias</p>

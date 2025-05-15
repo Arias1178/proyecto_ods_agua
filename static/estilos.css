@@ -8,7 +8,7 @@ body {
 
 /* Encabezados */
 h2, h1 {
-    text-align: center; 
+    text-align: center;
     color: white;
 }
 
@@ -66,7 +66,48 @@ h2, h1 {
     border-color: #007bff;
     box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
 }
+/* ... otros estilos ... */
 
+/* Estilos para la sección de la campaña */
+.seccion-campana.contenedor {
+    text-align: center;
+    padding: 40px 20px;
+    background: linear-gradient(#051f30, #000000); /* Un fondo claro para destacar */
+    color: #ffffff; /* Texto oscuro para contraste */
+    margin-bottom: 30px;
+    border-radius: 8px;
+}
+
+.mensaje-campana h2 {
+    color: #007bff;
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+}
+
+.frase-campana {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin-bottom: 15px;
+    font-weight: 600; /* Darle un poco de énfasis */
+}
+
+.boton-campana {
+    background-color: #28a745; /* Un color llamativo para la acción */
+    color: white;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: inline-block; /* Para que no ocupe todo el ancho como el botón del formulario */
+}
+
+.boton-campana:hover {
+    background-color: #1e7e34;
+}
+
+/* ... otros estilos ... */
 button[type="submit"] {
     background-color: #007bff;
     color: white;
@@ -86,7 +127,6 @@ button[type="submit"]:hover {
 /* Footer */
 footer {
     background: linear-gradient(#051f30, #000000);
-    color: white;
     color: white;
     text-align: center;
     padding: 1.5rem 0;
@@ -109,54 +149,94 @@ footer p {
     margin-right: 1rem;
 }
 
-/* Cuadros Centrales */
-.contenedor {
+/* Estilos para la sección "¿Quiénes somos?" */
+.seccion-quienes-somos.contenedor {
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+/* Contenedor principal para mantener el centrado y ancho máximo */
+.contenedor-principal.contenedor {
+    /* No necesitamos estilos de flex aquí, el flujo normal será vertical */
+    padding: 20px; /* Puedes ajustar el padding si lo deseas */
+    max-width: 1400px; /* Si tienes un ancho máximo para tu contenido */
+    margin: 0 auto; /* Para centrar horizontalmente */
+}
+
+/* Cuadros Centrales (disposición horizontal) */
+.contenedor-cuadros {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     gap: 20px;
     flex-wrap: wrap;
-    padding: 20px;
-    max-width: 1400px;
-    margin: 3rem auto;
 }
 
 .cuadro {
+    -webkit-box-shadow: 0px 5px 15px 0px rgba(112,112,112,1);
+    -moz-box-shadow: 0px 5px 15px 0px rgba(112,112,112,1);
+    box-shadow: 0px 5px 15px 0px rgba(112,112,112,1);
     background: linear-gradient(#051f30, #000000);
-    color: white;
-    padding: 40px;
-    text-align: center;
-    font-size: 1.5rem;
-    border-radius: 30px;
-    border: 2px solid #0056b3;
-    flex: 1 1 300px; /* flex-grow, flex-shrink, flex-basis */
+    padding: 1rem;
+    box-sizing: border-box;
+    border-radius: 1rem;
+    overflow: hidden;
+    flex: 1 1 300px;
     max-width: 400px;
-    transition: transform 0.3s;
+    margin-bottom: 20px; /* Espacio entre filas si se envuelven */
 }
 
 .cuadro:hover {
     transform: scale(1.03);
 }
 
-/* Sombra reutilizable */
-.sombra {
-    -webkit-box-shadow: 0px 5px 15px 0px rgba(112,112,112,1);
-    -moz-box-shadow: 0px 5px 15px 0px rgba(112,112,112,1);
-    box-shadow: 0px 5px 15px 0px rgba(112,112,112,1);
-    background-color: #ffffff;
-    padding: 1rem;
-    box-sizing: border-box;
-    border-radius: 1rem;
-    overflow: hidden;
-}
 
-/* Responsive */
+/* Responsive para los cuadros */
 @media (max-width: 768px) {
-    .contenedor {
+    .contenedor-cuadros {
         flex-direction: column;
         align-items: center;
     }
 
-    #formulario {
-        padding: 2rem 1rem;
+    .cuadro {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
     }
+}
+#formulario {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out;
+    margin-top: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+/* Estilos para mostrar el formulario cuando es el objetivo (:target) */
+#formulario:target {
+    max-height: 1000px; /* Un valor alto para asegurar que se muestre todo el contenido */
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-top: 3rem; /* Restaurar el margen superior */
+}
+
+/* Estilos para que el enlace se vea como un botón (ya deberías tener algunos de estos) */
+.boton-descubre {
+    display: inline-block; /* Para controlar ancho y alto */
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    text-align: center;
+    text-decoration: none; /* Quitar subrayado del enlace */
+    cursor: pointer;
+    border-radius: 10px;
+    border: none;
+    background-color: #007bff; /* Color primario */
+    color: white;
+    transition: background-color 0.3s ease;
+    width: 100%; /* Para que ocupe el ancho del contenedor */
+}
+
+.boton-descubre:hover {
+    background-color: #0056b3;
 }

@@ -7,7 +7,7 @@ body {
 }
 
 /* Encabezados */
-h2, h1 {
+h2, h1, h3 {
     text-align: center;
     color: white;
 }
@@ -114,7 +114,7 @@ button[type="submit"] {
     padding: 1rem;
     font-size: 1.1rem;
     border: none;
-    border-radius: 8px;
+    border-radius: 6px;
     cursor: pointer;
     width: 100%;
     transition: all 0.3s;

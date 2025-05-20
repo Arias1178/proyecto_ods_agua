@@ -119,3 +119,63 @@ a:hover {
         margin-bottom: 20px;
     }
 }
+.contenedor-acciones {
+  text-align: center;
+  padding: 20px;
+  background: linear-gradient(#051f30, #000000);
+}
+
+.contenedor-acciones h2 {
+  color: #0077b6;
+  font-size: 28px;
+  margin-bottom: 30px;
+}
+
+.contenedor-cuadros-acciones {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.cuadro-accion {
+  background: linear-gradient(#051f30, #000000);
+  border: 2px solid #0077b6;
+  border-radius: 10px;
+  padding: 20px;
+  width: 220px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efecto al pasar el mouse */
+.cuadro-accion:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 119, 182, 0.3);
+  border-color: #00b4d8;
+}
+
+/* Cuadro inferior */
+.cuadro-inferior {
+  margin-top: 40px;
+  max-width: 1000px;
+  width: 100%;
+  text-align: left;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cuadro-inferior h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #0077b6;
+}
+
+.cuadro-inferior ul {
+  padding-left: 20px;
+  line-height: 1.8;
+}
+
+.cuadro-inferior ul li {
+  margin-bottom: 8px;
+}

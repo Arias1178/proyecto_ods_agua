@@ -4,6 +4,7 @@ body {
     color: white;
     margin: 0;
     padding: 0;
+    min-height: 100vh;
 }
 
 /* Encabezados */
@@ -12,9 +13,75 @@ h2, h1, h3 {
     color: white;
 }
 
+.seccion-encabezado {
+    text-align: center;
+    padding: 50px 20px;
+    color: #ffffff;
+    background-color: transparent;
+}
+
+.seccion-encabezado h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #90e0ef;
+}
+
+.seccion-encabezado h2 {
+    font-size: 28px;
+    margin-top: 40px;
+    color: #00b4d8;
+}
+
+.seccion-encabezado p {
+    max-width: 900px;
+    margin: 10px auto;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/* Nuevo: estilo de contenedor de texto lateral (quienes somos, qué buscamos) */
+.seccion-informativa {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.bloque-informativo {
+    background-color: transparent;
+    color: #ffffff;
+    border-radius: 15px;
+    padding: 25px;
+    max-width: 400px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.bloque-informativo:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 18px rgba(0, 180, 216, 0.4);
+}
+
+.bloque-informativo h3 {
+    font-size: 22px;
+    margin-bottom: 15px;
+    color: #90e0ef;
+}
+
+.bloque-informativo ul {
+    padding-left: 20px;
+}
+
+.bloque-informativo ul li {
+    margin-bottom: 10px;
+    list-style-type: disc;
+}
+
 /* Navbar */
 .navbar {
-    background: linear-gradient(#051f30, #000000);
+    background-color: transparent;
 }
 
 .navbar a {
@@ -33,14 +100,14 @@ h2, h1, h3 {
 
 /* Formulario */
 #formulario {
-    background: linear-gradient(#051f30, #000000);
+    background-color: transparent;
     color: white;
     padding: 4rem 2rem;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     max-width: 700px;
     margin: 3rem auto;
-    color: #333;
+    color: #ffffff;
 }
 
 #formulario h2 {
@@ -66,14 +133,13 @@ h2, h1, h3 {
     border-color: #007bff;
     box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
 }
-/* ... otros estilos ... */
 
 /* Estilos para la sección de la campaña */
 .seccion-campana.contenedor {
     text-align: center;
     padding: 40px 20px;
-    background: linear-gradient(#051f30, #000000); /* Un fondo claro para destacar */
-    color: #ffffff; /* Texto oscuro para contraste */
+    background-color: transparent;
+    color: #ffffff;
     margin-bottom: 30px;
     border-radius: 8px;
 }
@@ -88,11 +154,11 @@ h2, h1, h3 {
     font-size: 1.2rem;
     line-height: 1.8;
     margin-bottom: 15px;
-    font-weight: 600; /* Darle un poco de énfasis */
+    font-weight: 600;
 }
 
 .boton-campana {
-    background-color: #28a745; /* Un color llamativo para la acción */
+    background-color: #28a745;
     color: white;
     padding: 15px 30px;
     font-size: 1.2rem;
@@ -100,14 +166,13 @@ h2, h1, h3 {
     border-radius: 10px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    display: inline-block; /* Para que no ocupe todo el ancho como el botón del formulario */
+    display: inline-block;
 }
 
 .boton-campana:hover {
     background-color: #1e7e34;
 }
 
-/* ... otros estilos ... */
 button[type="submit"] {
     background-color: #007bff;
     color: white;
@@ -126,7 +191,7 @@ button[type="submit"]:hover {
 
 /* Footer */
 footer {
-    background: linear-gradient(#051f30, #000000);
+    background-color: transparent;
     color: white;
     text-align: center;
     padding: 1.5rem 0;
@@ -138,7 +203,7 @@ footer p {
 
 /* Topbar */
 .container-fluid.bg-primary {
-    background: linear-gradient(#051f30, #000000);
+    background-color: transparent;
 }
 
 .container-fluid.bg-primary .text-white {
@@ -156,15 +221,14 @@ footer p {
     margin-bottom: 20px;
 }
 
-/* Contenedor principal para mantener el centrado y ancho máximo */
+/* Contenedor principal */
 .contenedor-principal.contenedor {
-    /* No necesitamos estilos de flex aquí, el flujo normal será vertical */
-    padding: 20px; /* Puedes ajustar el padding si lo deseas */
-    max-width: 1400px; /* Si tienes un ancho máximo para tu contenido */
-    margin: 0 auto; /* Para centrar horizontalmente */
+    padding: 20px;
+    max-width: 1400px;
+    margin: 0 auto;
 }
 
-/* Cuadros Centrales (disposición horizontal) */
+/* Cuadros Centrales */
 .contenedor-cuadros {
     display: flex;
     justify-content: space-around;
@@ -176,22 +240,21 @@ footer p {
     -webkit-box-shadow: 0px 5px 15px 0px rgba(112,112,112,1);
     -moz-box-shadow: 0px 5px 15px 0px rgba(112,112,112,1);
     box-shadow: 0px 5px 15px 0px rgba(112,112,112,1);
-    background: linear-gradient(#051f30, #000000);
+    background-color: transparent;
     padding: 1rem;
     box-sizing: border-box;
     border-radius: 1rem;
     overflow: hidden;
     flex: 1 1 300px;
     max-width: 400px;
-    margin-bottom: 20px; /* Espacio entre filas si se envuelven */
+    margin-bottom: 20px;
 }
 
 .cuadro:hover {
     transform: scale(1.03);
 }
 
-
-/* Responsive para los cuadros */
+/* Responsive para cuadros */
 @media (max-width: 768px) {
     .contenedor-cuadros {
         flex-direction: column;
@@ -204,6 +267,8 @@ footer p {
         margin-right: auto;
     }
 }
+
+/* Mostrar/ocultar formulario */
 #formulario {
     max-height: 0;
     overflow: hidden;
@@ -213,28 +278,27 @@ footer p {
     padding-bottom: 0;
 }
 
-/* Estilos para mostrar el formulario cuando es el objetivo (:target) */
 #formulario:target {
-    max-height: 1000px; /* Un valor alto para asegurar que se muestre todo el contenido */
+    max-height: 1000px;
     padding-top: 20px;
     padding-bottom: 20px;
-    margin-top: 3rem; /* Restaurar el margen superior */
+    margin-top: 3rem;
 }
 
-/* Estilos para que el enlace se vea como un botón (ya deberías tener algunos de estos) */
+/* Botón estilo enlace */
 .boton-descubre {
-    display: inline-block; /* Para controlar ancho y alto */
+    display: inline-block;
     padding: 15px 30px;
     font-size: 1.2rem;
     text-align: center;
-    text-decoration: none; /* Quitar subrayado del enlace */
+    text-decoration: none;
     cursor: pointer;
     border-radius: 10px;
     border: none;
-    background-color: #007bff; /* Color primario */
+    background-color: #007bff;
     color: white;
     transition: background-color 0.3s ease;
-    width: 100%; /* Para que ocupe el ancho del contenedor */
+    width: 100%;
 }
 
 .boton-descubre:hover {

@@ -1,3 +1,9 @@
+html, body { /* Agrega 'html' aquí */
+    height: 100%; /* ¡CLAVE! Asegura que la altura se propague */
+    margin: 0;
+    padding: 0;
+}
+
 body {
     font-family: 'Open Sans', sans-serif;
     background: linear-gradient(#051f30, #000000);
@@ -10,8 +16,93 @@ body {
 /* Encabezados */
 h2, h1, h3 {
     text-align: center;
-    color: white;
+    color: #00b4d8;
 }
+/* Contenedor principal del slider */
+.slider-container {
+    position: relative;
+    width: 100%; /* Ocupa el 100% del ancho de su padre */
+    /* Elimina el max-width si quieres que se extienda a lo largo de la página */
+    /* max-width: 800px; */ /* Si quieres que se adapte a todo el ancho disponible, esta línea debe eliminarse o ajustarse */
+    height: 500px; /* Puedes ajustar esta altura si lo deseas */
+    margin: 20px auto; /* Centra el slider y le da un margen superior/inferior */
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    /* Puedes añadir aquí el degradado oscuro si quieres que el fondo del contenedor lo tenga */
+    /* background: linear-gradient(#051f30, #000000); */
+}
+
+/* Contenedor de las diapositivas */
+.slides {
+    display: flex;
+    width: 300%; /* Sigue siendo 100% * número de slides */
+    height: 100%;
+    transition: transform 0.6s ease;
+}
+
+/* Cada diapositiva individual */
+.slide {
+    width: 100%; /* Ocupa el 100% del ancho asignado por .slides */
+    flex-shrink: 0; /* Evita que las diapositivas se encojan */
+    height: 100%; /* Asegura que la diapositiva ocupe toda la altura del slider-container */
+}
+
+/* La imagen dentro de cada diapositiva */
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* ¡Cambio clave aquí! */
+    display: block;
+}
+
+/* Controles de radio (ocultos) */
+input[type="radio"] {
+    display: none;
+}
+
+/* Transformación de las diapositivas al seleccionar un radio button */
+#slide1:checked ~ .slides {
+    transform: translateX(0%);
+}
+#slide2:checked ~ .slides {
+    transform: translateX(-100%);
+}
+#slide3:checked ~ .slides {
+    transform: translateX(-200%);
+}
+
+/* Navegación manual (puntos) */
+.nav-manual {
+    position: absolute;
+    bottom: 15px;
+    width: 100%;
+    text-align: center;
+    z-index: 10; /* Asegura que los botones estén por encima de las imágenes */
+}
+
+.manual-btn {
+    border: 2px solid #fff;
+    padding: 5px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: inline-block;
+    margin: 0 5px;
+    transition: background 0.3s;
+    background-color: rgba(255, 255, 255, 0.5); /* Un fondo semitransparente para que se vean mejor */
+}
+
+.manual-btn:hover {
+    background: #fff;
+}
+
+/* Estilo para el botón manual activo */
+#slide1:checked ~ .nav-manual .manual-btn:nth-child(1),
+#slide2:checked ~ .nav-manual .manual-btn:nth-child(2),
+#slide3:checked ~ .nav-manual .manual-btn:nth-child(3) {
+    background: #fff;
+}
+
 
 .seccion-encabezado {
     text-align: center;

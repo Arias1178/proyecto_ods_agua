@@ -386,3 +386,78 @@ footer p {
 .boton-descubre:hover {
     background-color: #0056b3;
 }
+
+.seccion-datos-agua {
+    background-color: transparent;
+    color: #ffffff;
+    padding: 30px 20px;
+    text-align: center;
+    border-radius: 10px;
+    max-width: 900px;
+    margin: 40px auto;
+    box-shadow: 0 4px 15px rgba(0, 180, 216, 0.2);
+}
+
+.seccion-datos-agua h2 {
+    color: #00b4d8;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.intro-datos {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+}
+
+.tabla-datos {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    text-align: left;
+}
+
+.fila {
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 15px;
+    border-radius: 8px;
+    line-height: 1.5;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+.seccion-medicion {
+    background-color: transparent;
+    color: #ffffff;
+    padding: 30px 20px;
+    text-align: center;
+    border-radius: 10px;
+    max-width: 900px;
+    margin: 40px auto;
+    box-shadow: 0 4px 15px rgba(0, 180, 216, 0.2);
+}
+
+.seccion-medicion h2 {
+    color: #90e0ef;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.intro-medicion {
+    font-size: 1.1rem;
+    margin-bottom: 25px;
+}
+
+.lista-medicion {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    text-align: left;
+}
+
+.item-medicion {
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 15px;
+    border-radius: 8px;
+    line-height: 1.5;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    font-size: 1rem;
+}
